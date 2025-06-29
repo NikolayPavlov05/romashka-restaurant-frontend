@@ -1,12 +1,11 @@
 import type { Category } from '@/api/models'
-import { API_HOST } from '@/api/config.ts'
 
 export class CategoriesService {
 
   public static async retrieve(): Promise<Category[]>{
 
     const response = await fetch(
-      `${API_HOST}/categories/category/retrieve`,
+      `/api/categories/category/retrieve`,
       {
           method: 'GET',
           headers: {

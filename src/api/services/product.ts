@@ -1,5 +1,4 @@
 import type { Product } from '@/api/models'
-import { API_HOST } from '@/api/config.ts'
 
 export class ProductService {
 
@@ -14,7 +13,7 @@ export class ProductService {
     });
 
     const response = await fetch(
-      `${API_HOST}/products/product/search?${urlSearchParams.toString()}`,
+      `/api/products/product/search?${urlSearchParams.toString()}`,
       {
           method: 'GET',
           headers: {
