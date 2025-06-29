@@ -1,1 +1,1 @@
-export const API_HOST = "http://192.168.1.115:8000";
+export const API_HOST = import.meta.env.API_HOST;
